@@ -1,0 +1,89 @@
+addToCartBtn = document.getElementsByClassName('addToCartBtn');//Target the classname of the addToCartBtn
+cartContainer = document.getElementsByClassName('cartContainer')[0];
+
+//1-add event listener to add to cart button
+for (var i = 0; i < addToCartBtn.length; i++) {
+    addToCartBtn[i].addEventListener('click', updateCartContainer)
+}//This for loop is used to access the multiple classes of addToCardBtn because there is more than one class in one page.addEventListener is the function in the javascript where we can perform multiple events on one time.
+//2-Get the image title and price of clicked products
+function updateCartContainer(e) {
+    addToCartBtn = e.target;//This is the target of the button add to cart
+    productContainer = addToCartBtn.parentElement;//Target the parent of the add to cart
+    productTitle = productContainer.getElementsByClassName('productTitle')[0].innerText;//Get the productTitle by using classname of the productTitle
+    productPrice = productContainer.getElementsByClassName('productPrice')[0].innerText;//Get the productPrice by using classname of the productPrice
+    productimg = productContainer.getElementsByClassName('img')[0].src;//Get the productImage by using classname of the productImage
+
+    cartTitles = cartContainer.getElementsByClassName('cartTitle');//Call the child element to confirm the product title
+    for (var i = 0; i < cartTitles.length; i++) {//Because the each step the loop is going through
+        if (cartTitles[i].innerText == productTitle) //if the click product already exist in the cart so simply display the message already exist cart{
+            alert('Product already to cart');
+            return;
+        }
+    }
+    3-Create row to append in cart section
+
+
+    AddRowInCart(productTitle, productPrice, productimg);//passing parameters into the AddRowInCart
+
+
+
+
+
+}
+
+// add new row in cart
+function AddRowInCart(productTitle, productPrice, productimg) {
+
+
+    div = document.createElement('div');/div is used to add element in the row
+    div.classList.add('row');
+    insideDiv = `<div class="col-xs-3 cartImage"> <img src="${productimg}"></div>//Display cart images in cart
+<div class="col-xs-3 cartTitle"> ${productTitle} </div>//Display the title
+<div class="col-xs-3 cartPrice"> ${productPrice}</div>//Display the price
+ <div class="col-xs-3 removeButton"> Remove</div>`;//Remove Button
+    div.innerHTML = insideDiv;//All the data append into innerHTML
+    cartContainer.appendChild(div);//The append data is stored in cartContainer parent Element
+    totalPrice = 0;
+    cartPrice = cartContainer.getElementsByClassName('cartPrice');
+    for (var i = 0; i < cartPrice.length; i++) {
+        priceFormatedNumb = cartPrice[i].innerText.replace('₹', '').replace(',', '');
+        totalPrice = totalPrice + parseInt((priceFormatedNumb));
+    }
+    document.getElementsByClassName('cartTotalPrice')[0].innerText = new Number(totalPrice).toLocaleString('en');;
+
+
+
+    removeButton = document.getElementsByClassName('removeButton');//Get the class of the removeButton class
+    for (var i = 0; i < removeButton.length; i++) {//This for loop is used to remove the products in the form of loop
+        removeButton[i].addEventListener('click', removeFromCart)
+    }
+}
+
+
+
+// remove product from Cart
+
+function removeFromCart(e) {
+    e.target.parentElement.remove();//When we click on parent element the parent element automatically removed
+    updatePriceAfterRemove();
+}
+
+
+function updatePriceAfterRemove() {
+    totalPrice = 0;
+    cartPrice = cartContainer.getElementsByClassName('cartPrice');
+    for (var i = 0; i < cartPrice.length; i++) {
+        priceFormatedNumb = cartPrice[i].innerText.replace('₹', '').replace(',', '');
+        totalPrice = totalPrice + parseInt((priceFormatedNumb));
+    }
+    document.getElementsByClassName('cartTotalPrice')[0].innerText = new Number(totalPrice).toLocaleString('en');
+
+
+}
+
+
+
+
+
+
+

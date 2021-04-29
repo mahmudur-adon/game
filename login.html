@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Gaming Warrior</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Game Warrior Template</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/styles.css" rel="Stylesheet" type="text/css" />
+    </head>
+
+    <body>
+        <header>
+            <div class="flex">
+                <div class="logo">
+                    <a href="#"><img src="images/game_warrior_logo.png" alt="Game Warrior Logo" /></a>
+                </div>
+                <nav>
+                    <button id="nav-toggle" class="hamburger-menu">
+                        <span class="strip"></span>
+                        <span class="strip"></span>
+                        <span class="strip"></span>
+                    </button>
+                    <ul id="nav-menu-container">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="Games.html">Games</a></li>
+                        <li><a href="Shop.html">Shop</a></li>
+                        <li><a href="#">Forums</a></li>
+                        <li><a href="Contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+                <a href="welcome.html" id="login-register-button">Login / Register</a>
+            </div>
+        </header>
+        <main>
+     <form action="action_page.php">
+  <div class="container">
+    <h1>LOGIN FORM</h1>
+    <p>Please fill in this form if u already have an account.</p>
+    <hr>
+ <label for="Name"><b>User Name</b></label>
+    <input type="text" placeholder="Enter Your Name" name="text" id="text" required>
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" id="email" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+
+        <hr>
+
+    <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+    <button type="submit" class="registerbtn" onclick="this.parentElement.style.display='registerbtn';">LOGIN</button>
+  </div>
+  
+
+  <div class="container signin">
+    <p> Want to create an account? <a href="welcome.html">Create Account</a>.</p>
+  </div>
+</form>
+        </main>
+        <footer>
+            <div class="flex">
+                <small>Copyright &copy; 2019 All rights reserved |  <span class="footer-heart">&#9829;</span> by Game Warrior</a>.</small>
+                <ul>
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+
+                    <li>
+                        <a href="Games.html">Games</a>
+                    </li>
+
+                    <li>
+                        <a href="Shop.html">Shop</a>
+                    </li>
+
+                    <li>
+                        <a href="#">Forums</a>
+                    </li>
+
+                    <li>
+                        <a href="Contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+
+        <script>
+            document.getElementById('nav-toggle').addEventListener('click', function () {
+                let navMenu = document.getElementById('nav-menu-container');
+                navMenu.style.display = navMenu.offsetParent === null ? 'block' : 'none';
+            });
+        </script>
+    </body>
+</html>
+  
+</body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Gaming Warrior</title>
+  <link rel="stylesheet" href="./style.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script defer src='script.js'></script>
+</head>
+<body>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Game Warrior Template</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/styles.css" rel="Stylesheet" type="text/css" />
+    </head>
+
+    <body>
+        <header>
+            <div class="flex">
+                <div class="logo">
+                    <a href="#"><img src="images/game_warrior_logo.png" alt="Game Warrior Logo" /></a>
+                </div>
+                <!-- nav bar -->
+                <nav>
+                    <button id="nav-toggle" class="hamburger-menu">
+                        <span class="strip"></span>
+                        <span class="strip"></span>
+                        <span class="strip"></span>
+                    </button>
+                    <ul id="nav-menu-container">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="Games.html">Games</a></li>
+                        <li><a href="Shop.html">Shop</a></li>                        
+                        <li><a href="Contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+                <a href="welcome.html" id="login-register-button">Login / Register</a>
+            </div>
+        </header>
+             <!-- This is our main page -->
+        <main>
+            <div class="content">
+<div class="row"><!--Row class is used in bootstrap to make the grid system.There are total 12 rows in a column. -->
+        <div class="productContainer col-xs-4 "><!--col-xs-4 means display 4 when the screen is extra small -->
+            <div class="productImage">
+                <img src="images/fifa.jpg" class='img'>
+            </div>
+            <div class="productTitle">
+                <h3>FIFA 20</h3>
+            </div>
+            <div class="productPrice">
+                <h3>&#163;5000</h3>
+            </div>
+            <div class="addToCartBtn">
+                Add to Cart
+            </div>
+        </div>
+        <div class="productContainer col-xs-4">
+            <div class=" productImage">
+                <img src="images/gta.jpg" class='img'>
+            </div>
+            <div class=" productTitle">
+                <h3>GTA 5</h3>
+            </div>
+            <div class=" productPrice">
+                <h3>&#163;3000</h3>
+            </div>
+            <div class="addToCartBtn">
+                Add to Cart
+            </div>
+        </div>
+        <div class="productContainer col-xs-4 "><!--col-xs-4 means 4 on extra small screen -->
+            <div class="productImage">
+                <img src="images/watchdog.jpg" class='img'><!--for images of the product -->
+            </div>
+            <div class="productTitle"><!--title of the product -->
+                <h3>WATCHDOG</h3>
+            </div>
+            <div class="productPrice"><!--price of the product displayed -->
+                <h3>&#163;2000</h3>
+            </div>
+            <div class="addToCartBtn"><!--button for add to cart -->
+                Add to Cart
+            </div>
+        </div>
+    </div>
+
+    <div class="cartContainer">
+        <div class="row">
+            <div class="col-xs-3 heading"> Product</div>
+            <div class="col-xs-3 heading"> Title</div>
+            <div class="col-xs-3 heading"> Price</div>
+            <div class="col-xs-3 heading">Action</div>
+
+
+        </div>
+
+    </div>
+
+    <div class="row totalPrice"><!--row is a class of bootstrap and totalPrice is used in css -->
+        <div class="col-xs-3 "> </div>
+        <div class="col-xs-3 "> </div>
+
+        <div class="col-xs-3 headingTop"> Total &#8377;</div><!--col-xs-3 means 3 on small screen -->
+        <div class="col-xs-3 headingTop cartTotalPrice"> 0</div>
+    </div>
+</div>
+</div>
+</main>
+
+ 	        <footer>
+            <div class="flex">
+                <small>Copyright &copy; 2019 All rights reserved |  <span class="footer-heart">&#9829;</span> by Game Warrior</a>.</small>
+                <ul>
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+
+                    <li>
+                        <a href="Games.html">Games</a>
+                    </li>
+
+                    <li>
+                        <a href="Shop.html">Shop</a>
+                    </li>
+                    
+                    <li>
+                        <a href="Contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+
+        <script>
+            document.getElementById('nav-toggle').addEventListener('click', function () {
+                let navMenu = document.getElementById('nav-menu-container');
+                navMenu.style.display = navMenu.offsetParent === null ? 'block' : 'none';
+            });
+        </script>
+            
+       
+        </body>
+</html>
+    <!--end footer -->
