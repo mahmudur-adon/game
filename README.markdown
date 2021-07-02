@@ -1,5 +1,2 @@
-# Let's Code This - Episode 2
-
-A Pen created on CodePen.io. Original URL: [https://codepen.io/onclickmedia/pen/LoGvoX](https://codepen.io/onclickmedia/pen/LoGvoX).
-
-
+A basic e com website made with html-css-js
+just run index.html and you are good to go!
